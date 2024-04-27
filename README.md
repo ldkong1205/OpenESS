@@ -12,11 +12,11 @@
       <a href="https://ipal.cnrs.fr/lai-xing-ng/" target='_blank'>Lai Xing Ng</a><sup>4</sup>&nbsp;&nbsp;&nbsp;
       <a href="https://ipal.cnrs.fr/benoit-cottereau-personal-page/" target='_blank'>Benoit R. Cottereau</a><sup>5,6</sup>&nbsp;&nbsp;&nbsp;
       <a href="https://www.comp.nus.edu.sg/cs/people/ooiwt/" target='_blank'>Wei Tsang Ooi</a><sup>1</sup>
-    <br>
+    </br>
   <sup>1</sup>National University of Singapore&nbsp;&nbsp;&nbsp;
   <sup>2</sup>CNRS@CREATE&nbsp;&nbsp;&nbsp;
   <sup>3</sup>Hochschule Bremerhaven&nbsp;&nbsp;&nbsp;
-  <sup>4</sup>Institute for Infocomm Research, A*STAR</br>
+  <sup>4</sup>Institute for Infocomm Research, A*STAR&nbsp;&nbsp;&nbsp;
   <sup>5</sup>IPAL, CNRS IRL 2955, Singapore&nbsp;&nbsp;&nbsp;
   <sup>6</sup>CerCo, CNRS UMR 5549, Universite Toulouse III
   </p>
@@ -51,10 +51,11 @@
 
 `OpenESS` is an open-vocabulary event-based semantic segmentation (ESS) framework that synergizes information from image, text, and event-data domains to enable scalable ESS in an open-world, annotation-efficient manner. 
 
-| <img width="125" src="docs/figs/teaser_1.png"> | <img width="125" src="docs/figs/teaser_2.png"> | <img width="125" src="docs/figs/teaser_3.png"> | <img width="125" src="docs/figs/teaser_4.png"> |
+| <img width="140" src="docs/figs/teaser_1.png"> | <img width="140" src="docs/figs/teaser_2.png"> | <img width="140" src="docs/figs/teaser_3.png"> | <img width="140" src="docs/figs/teaser_4.png"> |
 | :-: | :-: | :-: | :-: |
-| Input Event Stream | “driveable” (Adjective) | 
-
+| Input Event Stream | “driveable” | “car” | “manmade” |
+| <img width="140" src="docs/figs/teaser_5.png"> | <img width="140" src="docs/figs/teaser_6.png"> | <img width="140" src="docs/figs/teaser_7.png"> | <img width="140" src="docs/figs/teaser_8.png"> |
+| Zero-Shot ESS | “walkable” | “barrier” | “flat” |
 
 
 
