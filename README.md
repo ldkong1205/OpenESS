@@ -51,10 +51,10 @@
 
 `OpenESS` is an open-vocabulary event-based semantic segmentation (ESS) framework that synergizes information from image, text, and event-data domains to enable scalable ESS in an open-world, annotation-efficient manner. 
 
-| <img width="171" src="docs/figs/teaser_1.png"> | <img width="171" src="docs/figs/teaser_2.png"> | <img width="171" src="docs/figs/teaser_3.png"> | <img width="171" src="docs/figs/teaser_4.png"> |
+| <img width="173" src="docs/figs/teaser_1.png"> | <img width="173" src="docs/figs/teaser_2.png"> | <img width="173" src="docs/figs/teaser_3.png"> | <img width="173" src="docs/figs/teaser_4.png"> |
 | :-: | :-: | :-: | :-: |
 | Input Event Stream | “Driveable” | “Car” | “Manmade” |
-| <img width="171" src="docs/figs/teaser_5.png"> | <img width="171" src="docs/figs/teaser_6.png"> | <img width="171" src="docs/figs/teaser_7.png"> | <img width="171" src="docs/figs/teaser_8.png"> |
+| <img width="173" src="docs/figs/teaser_5.png"> | <img width="173" src="docs/figs/teaser_6.png"> | <img width="173" src="docs/figs/teaser_7.png"> | <img width="173" src="docs/figs/teaser_8.png"> |
 | Zero-Shot ESS | “Walkable” | “Barrier” | “Flat” |
 
 
@@ -66,6 +66,8 @@
 
 
 ## Outline
+
+- [Demo](#movie_camera-demo)
 - [Installation](#gear-installation)
 - [Data Preparation](#hotsprings-data-preparation)
 - [Getting Started](#rocket-getting-started)
@@ -76,9 +78,11 @@
 - [Acknowledgements](#acknowledgements)
 
 
-## Demo
-
-<video src="./docs/video/demo1.mp4" controls title="Demo1"></video>
+## :movie_camera: Demo
+| Demo #1 | Demo #2| Demo #3 | 
+| :-: | :-: | :-: |
+| <img width="100%" src="docs/figs/demo1.png"> |  <img width="100%" src="docs/figs/demo2.png"> |  <img width="100%" src="docs/figs/demo3.png"> | 
+| [YouTube]() <sup>:arrow_heading_up:</sup> | [YouTube]() <sup>:arrow_heading_up:</sup> | [YouTube]() <sup>:arrow_heading_up:</sup> |
 
 
 ## :gear: Installation
