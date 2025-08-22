@@ -1,0 +1,4 @@
+{
+    "exclude": ["data"],
+    "typeCheckingMode": "off"
+}

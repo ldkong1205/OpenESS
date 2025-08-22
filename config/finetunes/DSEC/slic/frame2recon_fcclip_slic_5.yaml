@@ -1,0 +1,86 @@
+dataset:
+  name_b: 'DSEC_events'
+  DSEC_events:
+    dataset_path: 'data/DSEC'
+    shape: [440, 640]
+    nr_events_data: 20
+    nr_events_files_per_data: None
+    fixed_duration: False
+    delta_t_per_data: 50
+    require_paired_data_train: False
+    require_paired_data_val: False
+    nr_events_window: 100000
+    event_representation: 'voxel_grid'
+    nr_temporal_bins: 5
+    separate_pol: False
+    normalize_event: False
+
+task:
+  semseg_num_classes: 11  # 6 for DDD17, 11/19 for DSEC
+
+dir:
+  log: 'log/finetune/dsec_frame2recon_fcclip_slic_5'
+
+model:
+  model_name: 'open_ess' # ['ess', 'ess_supervised', 'open_ess']
+  skip_connect_encoder: True
+  skip_connect_task: True
+  skip_connect_task_type: 'concat'
+  data_augmentation_train: True
+  train_on_event_labels: False # True for ESS supervised (events labels + frames labels), False for ESS UDA
+  unfrozen_e2vid: True
+
+optim:
+  batch_size_b: 8
+  lr_voxel: 1e-5
+  lr_recon: 1e-5
+  lr_frame: 1e-5
+  lr_decay: 0.9
+  num_epochs: 50     ### {full: 20},  {20%: 50}, {10%: 100}, {5%: 200}, {1%: 1000}
+  val_epoch_step: 1  ###
+  weight_task_loss: 1
+  task_loss: ['dice', 'cross_entropy']
+
+checkpoint:
+  save_checkpoint: True
+  resume_training: False
+  resume_file: ''
+
+hardware:
+  num_cpu_workers: 4  # -1: auto, 0: main thread
+  gpu_device: 0  # [0 or 'cpu']
+
+clip:
+  skip_ratio: 5  # {1: full}, {2: 50%}, {5: 20%}, {10: 10%}, {20: 5%}, {100: 1%}
+  text_embeddings_path: 'maskclip_weights/event_ViT16_clip_text_dsec.pth'
+  maskclip_checkpoint: 'maskclip_weights/ViT16_clip_backbone.pth'
+  visual_projs_path: 'maskclip_weights/ViT16_clip_weights.pth'
+  output_stride: 32
+  pre_trained_backbone: ''
+
+  config_option: 'frame2recon'  # {'recon2voxel', 'frame2voxel', 'frame2recon'}
+  
+  # supervised-only
+  if_supervised_only: False
+
+  # finetuning
+  if_finetuning: True
+  load_pretrained_weights: True
+  pretrained_file: ''
+  if_switchable_train: True # no use
+
+  # pretraining
+  if_pretraining: False
+  if_spatial_contrastive: False
+  image_weights: 'dino'
+  superpixel_sources: 'sp_slic_rgb'  # {'sp_sam_rgb' for 'frame2voxel' and 'frame2recon'}, {'sp_sam_recon' for 'recon2voxel'}
+  superpixel_size: 100
+
+  if_dense_clip_supervision: False
+  pl_sources: 'pl_fcclip_rgb'
+
+  if_sam_distillation: False  # no use
+
+  # linear probing
+  if_linear_probing: False
+  use_amp: False
